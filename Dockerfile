@@ -38,6 +38,6 @@ RUN python ./BACKEND/manage.py collectstatic --no-input
 
 # Expose port 80 (adjust as necessary)
 EXPOSE 80
-WORKDIR /code/BACKEND/grapevine
+WORKDIR /code/BACKEND/
 # Command to run Django server
 CMD ["gunicorn", "grapevine.wsgi:application", "--bind", "0.0.0.0:8000"]
