@@ -31,7 +31,7 @@ COPY ./BACKEND/ /code/BACKEND/
 RUN pip install -r ./BACKEND/requirements.txt
 COPY --from=build-stage ./code/grapevine/build ./BACKEND/static/
 COPY --from=build-stage ./code/grapevine/build/static ./BACKEND/static/
-COPY --from=build-stage ./code/grapevine/build/index.html ./BACKEND/grapevine/templates/index.html
+COPY --from=build-stage ./code/grapevine/build/index.html ./BACKEND/grapevine/static/index.html
 
 RUN python ./BACKEND/manage.py migrate
 RUN python ./BACKEND/manage.py collectstatic --no-input
