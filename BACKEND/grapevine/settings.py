@@ -63,7 +63,7 @@ ROOT_URLCONF = 'grapevine.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['grapevine/templates'],
+        'DIRS': ['grapevine/static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
